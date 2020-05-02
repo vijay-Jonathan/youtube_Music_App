@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Search YouTube</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+
+      .jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-image:linear-gradient(73deg, #F05454, #D51616);
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 700;
+  color: black;
+  font-size: 48px;
+  text-decoration-color: black;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+.center {
+  margin: auto;
+  width: auto;
+  /* border: 3px solid green; */
+  padding: 10px;
+}
+.hi{
+  font-weight: 200;
+  font-size: 25px;
+  color: black;
+}
+
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Search <i class="fa fa-youtube" style="font-size:48px;color:rgb(0, 0, 0)"></i></h1>
+      <!-- <p class="lead text-muted">Get the top results on YouTube for your Search!</p> -->
+      <h1 class="hi">Get the top results on YouTube for your Search!</h1>
+
+      <form action="/handle_data" method="POST" class="inuput-group mb-3">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control"name="projectFilepath"  placeholder="Enter The Song Name" aria-label="Username">
+      </div>
+      <p>
+         <input type="submit" class="btn btn-primary my-2"> 
+         <!-- <a href="/handle_data" class="btn btn-primary my-2">YouTube Search</a> -->
+        <!-- <a href="#" class="btn btn-secondary my-2">I'm Feeling Lucky</a> -->
+      </p>
+    </form>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light" >
+    <div class="container">
+      <div class="row">
+         <!-- <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://via.placeholder.com/480x360" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img>
+            <div class="card-body">
+              <p class="card-text">Video title</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>  -->
+        
+        <div class="center" align="align-items-center">
+          
+          <div class="card mb-4 shadow-sm">
+            <!-- <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://via.placeholder.com/480x360" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img> -->
+            <div class="card-body">
+              <p class="card-text">Video title</p>
+             <right> <iframe width="840" height="460" src="{{ songLink  }}" frameborder="0" allowfullscreen></iframe></right> 
+
+              
+            </div>
+          </div>
+        </div>
+      
+        <!-- <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://via.placeholder.com/480x360" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img>
+            <div class="card-body">
+              <p class="card-text">Video title</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://via.placeholder.com/480x360" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img>
+            <div class="card-body">
+              <p class="card-text">Video title</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>

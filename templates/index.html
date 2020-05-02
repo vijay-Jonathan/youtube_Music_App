@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+body {
+   margin: 0;
+}
+#index-jumbotron {
+    background-image: url(static/images/vijay.jpg);
+    background-size: cover;
+    padding-bottom: 46.128%; /* <- This value should be equal to height / width */
+}
+</style>
+<div class="jumbotran text-center">
+	<h1>Welcome to YouTube Music App </h1>
+	<p class="lead"> *** This Application Requires Good Internet connection(1MBPS) for songs to play *** </p>
+
+	<p class="lead"> Kaluri Vijay Mani Dev </p>
+	<p class="lead"> Open Lab End Semister Project  </p>
+	<p class="lead"> Roll no : CB.EN.U4CSE17031 </p>
+
+	{% if session.logged_in==NULL %}
+	<a href="/register" class="btn btn-primary btn-lg">REGISTER</a>
+	<a href="/login" class="btn btn-primary btn-lg">LOGIN</a>
+	{% endif %}
+</div>
+<div id="index-jumbotron"></div>
+{% endblock %}
